@@ -12,7 +12,7 @@
     <el-container>
       <!-- 侧边栏 -->
       <el-aside :width="isCollapse ? '64px' : '200px'">
-        <div class="toggle-button" @click="togleCollapse">|||</div>
+        <div class="toggle-button" @click="isCollapse=!isCollapse">|||</div>
         <el-menu unique-opened :collapse="isCollapse" :collapse-transition="false" router :default-active="activePath" background-color="#333744" text-color="#fff" active-text-color="#409FFF">
            <!-- :unique-opened="true"->只允许展开一个菜单 -->
            <!-- :collapse-transition="false" -> 关闭动画 -->

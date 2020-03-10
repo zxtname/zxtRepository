@@ -102,7 +102,7 @@ export default {
 }
 .login_box {
   width: 450px;
-  height: 360px;
+  height: 300px;
   background-color: #fff;
   border-radius: 3px;
   position: absolute;
@@ -132,9 +132,9 @@ export default {
 }
 .login_form {
   position: absolute;
-  bottom: 60px;
+  bottom: 20px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 .btns {

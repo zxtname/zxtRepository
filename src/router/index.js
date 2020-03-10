@@ -2,12 +2,34 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import home from '../components/Home.vue'
+import T from '../components/T.vue'
+import user from '../components/user/User.vue'
+import right from '../components/power/Rights.vue'
+import roles from '../components/power/Roles.vue'
+import cate from '../components/goods/Cate.vue'
+import param from '../components/goods/Params.vue'
+import GoodsList from '../components/goods/List.vue' 
+import Add from '../components/goods/Add.vue'
 Vue.use(VueRouter)
 
 const routes = [
 	{ path: '/', redirect: '/login' },
 	{ path: '/login', component: Login },
-	{ path: '/home', component: home }
+	{ 
+		path: '/home',
+		component: home,
+		redirect: '/T',
+		children: [
+			{ path: '/T', component: T },
+			{ path: '/users', component: user },
+			{ path: '/rights', component: right },
+			{ path: '/roles', component: roles },
+			{ path: '/categories', component: cate },
+			{ path: '/params', component: param },
+			{ path: '/goods', component: GoodsList },
+			{ path: '/goods/add', component: Add }
+		]
+	}
 	
 ]
 
